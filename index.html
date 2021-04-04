@@ -1,0 +1,26 @@
+<html>
+
+<head>
+    <title>Fahrenheit to Celsius</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <p>
+        <label>Fahrenheit</label>
+        <input id="inputFahrenheit" type="number" placeholder="Fahrenheit" oninput="temperatureConverter(this.value)" onchange="temperatureConverter(this.value)">
+    </p>
+    <p>Kelvin: <span id="outputKelvin"></span></p>
+
+    <script>
+        function temperatureConverter(valNum) {
+            valNum = parseFloat(valNum);
+            document.getElementById("outputKelvin").innerHTML = ((valNum - 32) / 1.8) + 273.15;
+        }
+
+    </script>
+
+</body>
+
+</html>
